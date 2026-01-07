@@ -40,6 +40,7 @@ export default function GraphComponent() {
 
   const options: any = {
     responsive: true,
+    maintainAspectRatio: false, // important for mobile
     plugins: {
       legend: {
         position: "top",
@@ -47,7 +48,6 @@ export default function GraphComponent() {
       title: {
         display: true,
         text: "Courses vs Categories",
-        // TypeScript-safe font spec
         font: {
           size: 20,
           weight: "bold" as const,
@@ -76,9 +76,9 @@ export default function GraphComponent() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-xl rounded-2xl">
+    <div className="w-full sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[70%] mx-auto p-4 sm:p-6 bg-white shadow-xl rounded-2xl h-[400px] sm:h-[450px] md:h-[500px]">
       <Bar data={data} options={options} />
-      <p className="mt-4 text-gray-600 text-center">
+      <p className="mt-4 text-gray-600 text-center text-sm sm:text-base">
         This graph shows the progress of 3 different courses across 4 categories.
       </p>
     </div>

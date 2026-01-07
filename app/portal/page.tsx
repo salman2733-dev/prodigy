@@ -5,10 +5,21 @@ import { BsBriefcase } from "react-icons/bs";
 
 export default function PortalPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center  from-blue-50 to-blue-100">
+    <div className="min-h-screen flex items-center justify-center px-4 from-blue-50 to-blue-100">
 
       {/* Card */}
-      <div className="w-[40%] md:w-[30%] bg-white rounded-2xl shadow-xl p-8 relative">
+      <div className="
+        w-full 
+        sm:w-[80%] 
+        md:w-[50%] 
+        lg:w-[40%] 
+        xl:w-[30%]
+        bg-white 
+        rounded-2xl 
+        shadow-xl 
+        p-6 sm:p-8 
+        relative
+      ">
 
         {/* Close Button */}
         <Link href="/">
@@ -54,8 +65,9 @@ export default function PortalPage() {
           />
 
           <button 
-          onClick={()=>alert("Form submitted succesfully")}
-          className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+            onClick={()=>alert("Form submitted succesfully")}
+            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+          >
             Continue
           </button>
         </div>
